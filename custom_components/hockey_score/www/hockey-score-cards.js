@@ -494,8 +494,10 @@ class HockeyBaseCard extends HTMLElement {
 
 class HockeyScoreCard extends HockeyBaseCard {
   static getStubConfig() {
+    // No "type" key: the card picker builds the draft's type itself and
+    // merges this stub OVER it — returning a type here overwrites the
+    // picker's correct one (that bug made picks unsavable).
     return {
-      type: "hockey-score-card",
       entity: TEAM_ENTITY,
       badges_entity: BADGES_ENTITY,
     };
@@ -659,7 +661,8 @@ class HockeyScoreCard extends HockeyBaseCard {
 
 class HockeyScoreStandingsCard extends HockeyBaseCard {
   static getStubConfig() {
-    return { type: "hockey-score-standings-card", entity: STANDINGS_ENTITY };
+    // No "type" key — see HockeyScoreCard.getStubConfig for why.
+    return { entity: STANDINGS_ENTITY };
   }
 
   setConfig(config) {
@@ -740,15 +743,23 @@ customElements.define("hockey-score-card", HockeyScoreCard);
 customElements.define("hockey-score-standings-card", HockeyScoreStandingsCard);
 
 // Make both cards findable in the dashboard editor's card picker.
+// Picker contract (verified against HA frontend 20261028.4):
+// - entry types here are UNPREFIXED: hui-card-picker adds "custom:"
+//   itself (`type = CUSTOM_TYPE_PREFIX + entry.type`). A prefixed entry
+//   becomes custom:custom:… and the picker tile spins forever.
+// - `preview: false` skips the picker's live-preview tile (button-card's
+//   pattern); the tile shows the name/description instead.
 (window.customCards = window.customCards || []).push(
   {
     type: "hockey-score-card",
     name: "Hockey Score",
     description: "Scoreboard: last match, live score with period, next match.",
+    preview: false,
   },
   {
     type: "hockey-score-standings-card",
     name: "Hockey Score Standings",
     description: "League table with the tracked team highlighted.",
+    preview: false,
   }
 );

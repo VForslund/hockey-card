@@ -9,5 +9,5 @@
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/VForslund/hockey-card/issues",
   "requirements": [],
-  "version": "1.0.3"
+  "version": "1.0.6"
 }
