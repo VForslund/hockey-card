@@ -1,0 +1,48 @@
+{
+  "team_tag": "leksands if",
+  "team_name": "Leksands IF",
+  "schedule_urls": [
+    "https://stats.swehockey.se/ScheduleAndResults/Schedule/20962",
+    "https://stats.swehockey.se/ScheduleAndResults/Schedule/18267"
+  ],
+  "is_live": false,
+  "last_game": {
+    "date": "2026-11-18",
+    "time": "19:00",
+    "home_team": "Nybro Vikings IF",
+    "away_team": "Leksands IF",
+    "home_score": 2,
+    "away_score": 3,
+    "venue": "Liljas Arena",
+    "round_detail": "",
+    "score_detail": "(0-0, 1-1, 1-1, 1-1)",
+    "overtime": true,
+    "shootout": false,
+    "team_result": "win"
+  },
+  "current_game": {
+    "is_live": false,
+    "date": "2026-11-20",
+    "time": "19:00",
+    "home_team": "Leksands IF",
+    "away_team": "Visby/Roma HK",
+    "home_score": 0,
+    "away_score": 0,
+    "venue": "Tegera Arena",
+    "round_detail": "",
+    "score_detail": "",
+    "overtime": false,
+    "shootout": false,
+    "period": ""
+  },
+  "next_game": {
+    "date": "2026-11-22",
+    "time": "19:00",
+    "home_team": "Västerås IK",
+    "away_team": "Leksands IF",
+    "home_score": 0,
+    "away_score": 0,
+    "venue": "ABB Arena Nord",
+    "round_detail": ""
+  }
+}

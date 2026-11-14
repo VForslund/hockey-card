@@ -1,0 +1,21 @@
+{
+  "team": [
+    "idle_vik_ot",
+    "live_p2_1_0",
+    {"status": 500},
+    {"status": 500},
+    "live_ot_2_2",
+    "finished_ot_win"
+  ],
+  "static": ["static_badges"],
+  "standings": ["standings"],
+  "start_fixture": "idle_vik_ot",
+  "expect_events": [
+    "hockey_score_game_start",
+    "hockey_score_goal",
+    "hockey_score_goal",
+    "hockey_score_game_end"
+  ],
+  "cadence": {"check_idle_gap": true, "check_live_gap": false},
+  "notes": "LIF's second goal (1-0 -> 2-2) happens DURING the outage and must NOT fire; the recovery re-baselines silently. The last poll delivers rise-1 OT winner + end."
+}

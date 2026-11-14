@@ -1,0 +1,25 @@
+{
+  "team": [
+    "idle_vik_ot",
+    "live_p1_0_0",
+    "live_p1_0_0",
+    "live_p2_1_0",
+    "live_p2_1_0",
+    "live_p2_1_1",
+    "live_ot_2_2",
+    "live_ot_2_2",
+    "finished_ot_win",
+    "finished_ot_win"
+  ],
+  "static": ["static_badges"],
+  "standings": ["standings"],
+  "start_fixture": "idle_vik_ot",
+  "expect_events": [
+    "hockey_score_game_start",
+    "hockey_score_goal",
+    "hockey_score_goal",
+    "hockey_score_goal",
+    "hockey_score_game_end"
+  ],
+  "cadence": {"check_idle_gap": true, "check_live_gap": true}
+}

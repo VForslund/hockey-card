@@ -1,0 +1,4 @@
+# Unit-test dependencies only (the integration itself needs nothing
+# beyond Home Assistant's built-ins).
+pytest>=8
+websocket-client>=1.8

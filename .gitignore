@@ -1,0 +1,14 @@
+# Local-only docs: internal ops manual and the (internal) build plan.
+# Never commit these — they name the live infra and the sharing plan.
+AGENTS.md
+MARKETPLACE_PLAN.md
+
+# Secrets, if any local test config ever appears here (e.g. a .env used
+# for dev runs pointing at the real API key):
+.env
+
+# Python artifacts
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/

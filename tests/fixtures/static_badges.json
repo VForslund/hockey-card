@@ -1,0 +1,17 @@
+{
+  "team_tag": "leksands if",
+  "team_name": "Leksands IF",
+  "team_badge": "https://badges.example.com/badges/leksands-if",
+  "last_game_badges": {
+    "home_badge": "https://badges.example.com/badges/vasteras-ik",
+    "away_badge": "https://badges.example.com/badges/leksands-if"
+  },
+  "current_game_badges": {
+    "home_badge": "https://badges.example.com/badges/nybro-vikings-if",
+    "away_badge": "https://badges.example.com/badges/leksands-if"
+  },
+  "next_game_badges": {
+    "home_badge": "https://badges.example.com/badges/leksands-if",
+    "away_badge": "https://badges.example.com/badges/visby-roma-hk"
+  }
+}

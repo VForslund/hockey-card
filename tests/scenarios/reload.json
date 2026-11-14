@@ -1,0 +1,44 @@
+{
+  "team": [
+    "idle_vik_ot",
+    "live_p1_0_0",
+    "live_p1_0_0",
+    "live_p1_0_0",
+    "live_p1_0_0",
+    "live_p1_0_0",
+    "live_p1_0_0",
+    "live_p1_0_0",
+    "live_p2_1_0",
+    "live_p2_1_0",
+    "live_p2_1_0",
+    "live_p2_1_0",
+    "live_p2_1_0",
+    "live_p2_1_0",
+    "live_p2_1_0",
+    "live_p2_1_0",
+    "live_p2_1_0",
+    "live_p2_1_0",
+    "live_p2_1_0",
+    "live_p2_1_1",
+    "live_ot_2_2",
+    "finished_ot_win",
+    "finished_ot_win"
+  ],
+  "static": ["static_badges"],
+  "standings": ["standings"],
+  "start_fixture": "idle_vik_ot",
+  "expect_events": [
+    "hockey_score_game_start",
+    "hockey_score_goal",
+    "hockey_score_goal",
+    "hockey_score_goal",
+    "hockey_score_game_end"
+  ],
+  "reload": {
+    "after_events": 2,
+    "entry_id": "nightsim_hockey_score",
+    "expect_fixture": "live_p2_1_0"
+  },
+  "cadence": { "check_idle_gap": true, "check_live_gap": true, "check_single_poller": true },
+  "notes": "Marketplace-style restartless update, simulated: after the first LIF goal the config entry is reloaded mid-live-game (POST /api/config/config_entries/entry/<id>/reload) — the same primitive the Marketplace uses to update integrations without restarting HA. The fresh coordinator silently re-baselines at 1-0 (the padded steady window covers the reload), then the equalizer and OT winner fire from genuinely watched pairs. A zombie coordinator surviving the unload would double-fire the two later goals and halve the poll gaps — the event sequence and check_single_poller both catch it."
+}

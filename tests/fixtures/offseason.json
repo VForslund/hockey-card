@@ -1,0 +1,44 @@
+{
+  "team_tag": "leksands if",
+  "team_name": "Leksands IF",
+  "schedule_urls": [
+    "https://stats.swehockey.se/ScheduleAndResults/Schedule/20962",
+    "https://stats.swehockey.se/ScheduleAndResults/Schedule/18267"
+  ],
+  "is_live": false,
+  "last_game": {
+    "date": "",
+    "time": "",
+    "home_team": "",
+    "away_team": "",
+    "home_score": null,
+    "away_score": null,
+    "venue": "",
+    "round_detail": ""
+  },
+  "current_game": {
+    "is_live": false,
+    "date": "",
+    "time": "",
+    "home_team": "",
+    "away_team": "",
+    "home_score": null,
+    "away_score": null,
+    "venue": "",
+    "round_detail": "",
+    "score_detail": "",
+    "overtime": false,
+    "shootout": false,
+    "period": ""
+  },
+  "next_game": {
+    "date": "",
+    "time": "",
+    "home_team": "",
+    "away_team": "",
+    "home_score": null,
+    "away_score": null,
+    "venue": "",
+    "round_detail": ""
+  }
+}

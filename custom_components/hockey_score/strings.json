@@ -1,0 +1,39 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "This API URL is already configured."
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the API.",
+      "invalid_auth": "Invalid API key for this URL.",
+      "invalid_url": "Enter a valid http:// or https:// URL."
+    },
+    "step": {
+      "user": {
+        "title": "Hockey Score",
+        "description": "Enter the API URL and the API key you were given privately.",
+        "data": {
+          "url": "API URL",
+          "api_key": "API key"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Hockey Score settings",
+        "description": "Update the API URL or rotate the API key.",
+        "data": {
+          "url": "API URL",
+          "api_key": "API key"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the API.",
+      "invalid_auth": "Invalid API key for this URL.",
+      "invalid_url": "Enter a valid http:// or https:// URL."
+    }
+  }
+}

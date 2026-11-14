@@ -1,0 +1,22 @@
+{
+  "team": [
+    "live_ot_2_2",
+    "live_ot_2_2",
+    "live_ot_2_2",
+    "live_ot_2_2",
+    "live_ot_2_2",
+    "live_ot_2_2",
+    "live_ot_2_2",
+    "live_ot_2_2",
+    "finished_resultless",
+    "finished_resultless",
+    "finished_ot_win",
+    "finished_ot_win"
+  ],
+  "static": ["static_badges"],
+  "standings": ["standings"],
+  "start_fixture": "live_ot_2_2",
+  "expect_events": ["hockey_score_game_end"],
+  "cadence": {"check_idle_gap": false, "check_live_gap": true},
+  "notes": "The 4.5h hard-cap exit: level 2-2, no result yet -> game_end stays silent; the schedule override publishes the real OT final -> exactly one end, never a replay."
+}
