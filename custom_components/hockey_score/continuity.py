@@ -156,8 +156,15 @@ def on_poll_success(state: ContinuityState, team_data: dict):
     # two consecutive successful polls. The watch identity still works on
     # the kickoff poll (prev current_game == the fixture that went live)
     # because upcoming scores are always 0 until the game starts.
+    # One side of the pair must have been LIVE — every sanctioned pair
+    # has one (live→live during games, idle→live kickoff, live→idle
+    # finish carrying the OT winner). An all-idle pair can only sweep a
+    # whole missed game from upcoming to played (HA dark all night) —
+    # that rise was never watched and fires nothing. Found by the
+    # 2026-11-15 production drill (idle_after_rollover's fictional
+    # 11-20 Visby 4-2 walked exactly that path).
     watch = state.live_fixture or fixture_identity(prev.get("current_game") or {})
-    if watch is not None:
+    if watch is not None and (prev_live or cur_live):
         prev_game = find_fixture(prev, watch)
         cur_game = find_fixture(team_data, watch)
         side = tracked_side(team_name, cur_game if cur_game is not None else prev_game)

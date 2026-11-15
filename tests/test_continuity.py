@@ -191,6 +191,18 @@ def test_idle_fixture_rollover_fires_nothing():
     assert events == []
 
 
+def test_whole_game_missed_across_two_idle_polls_fires_nothing():
+    # Found by the 2026-11-15 production drill: HA dark for an entire
+    # game means the next poll pair sweeps the fixture from upcoming
+    # (0-0, finished_ot_win's current_game) to played 4-2
+    # (idle_after_rollover's last_game). That rise was never watched
+    # live — no Visby rise-4 goal on top of the real OT winner.
+    events = replay(["live_ot_2_2", "finished_ot_win", "idle_after_rollover"])
+    assert types_of(events) == [GOAL, END]
+    assert events[0][1]["fixture"] == NYBRO_FIXTURE
+    assert events[0][1]["rise"] == 1
+
+
 def test_malformed_payload_mid_game_fires_nothing():
     garbage = load_fixture("live_p2_1_0")
     garbage["current_game"] = "nonsense"
