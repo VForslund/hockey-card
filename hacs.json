@@ -1,5 +1,8 @@
 {
   "name": "Hockey Score",
   "render_readme": true,
-  "country": ["SE"]
+  "country": [
+    "SE"
+  ],
+  "homeassistant": "2026.10.0"
 }
